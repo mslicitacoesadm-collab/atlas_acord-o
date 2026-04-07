@@ -1,12 +1,34 @@
 from __future__ import annotations
 
 import os
+import sys
 from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
 
 import pandas as pd
 import streamlit as st
 
-from tools.bootstrap_github_streamlit import ensure_base_ready
+try:
+    from tools.bootstrap_github_streamlit import ensure_base_ready
+except Exception:
+    def ensure_base_ready(base_dir: Path | None = None) -> dict:
+        root = Path(base_dir or BASE_DIR)
+        output_db = root / 'data' / 'base' / 'base_inteligente.db'
+        if output_db.exists():
+            return {
+                'ready': True,
+                'message': f'Base já encontrada em {output_db}.',
+                'db_path': str(output_db),
+                'integrity': 'desconhecida',
+            }
+        return {
+            'ready': False,
+            'message': 'Falha ao importar o bootstrap automático. Verifique se a pasta tools/ está presente no projeto.',
+            'db_path': str(output_db),
+        }
 
 from modules.base_db import find_db_files, summarize_bases
 from modules.citation_extractor import classify_piece_type, detect_thesis, extract_references_with_context, split_into_argument_blocks
@@ -19,7 +41,6 @@ from modules.telemetry import get_summary, log_event
 st.set_page_config(page_title='Atlas dos Acórdãos V17', page_icon='⚖️', layout='wide')
 
 
-BASE_DIR = Path(__file__).parent
 DB_DIR = BASE_DIR / 'data' / 'base'
 LOGO_PATH = BASE_DIR / 'assets' / 'logo_ms.png'
 MAX_UPLOAD_MB = 20
