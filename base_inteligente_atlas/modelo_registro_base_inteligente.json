@@ -1,0 +1,54 @@
+{
+  "id_unico": "acordao_1418_2024_1camara",
+  "tipo": "acordao",
+  "numero": "1418",
+  "ano": "2024",
+  "tribunal": "TCM/BA",
+  "colegiado": "1ª Câmara",
+  "origem_db": "acordaos_2024_parte_02.db",
+  "origem_tabela": "acordaos",
+  "tema_principal": "inexequibilidade",
+  "subtemas_json": [
+    "diligência prévia",
+    "presunção relativa",
+    "planilha de custos"
+  ],
+  "tese_central": "A desclassificação por inexequibilidade exige diligência e oportunidade de comprovação pela licitante.",
+  "ementa_resumida": "A Administração não deve desclassificar automaticamente proposta supostamente inexequível sem diligência prévia.",
+  "trecho_chave": "A presunção de inexequibilidade não afasta a necessidade de oportunizar esclarecimento e prova da exequibilidade.",
+  "fundamentos_legais_json": [
+    "Lei 14.133/2021, art. 59",
+    "IN SEGES 73/2022"
+  ],
+  "palavras_chave_json": [
+    "inexequibilidade",
+    "diligência",
+    "planilha",
+    "custos",
+    "proposta"
+  ],
+  "lado_favorecido_json": [
+    "licitante"
+  ],
+  "tipo_de_uso_json": [
+    "citacao",
+    "substituicao",
+    "reforco"
+  ],
+  "aplicavel_em_json": [
+    "recurso administrativo",
+    "contrarrazões",
+    "defesa de exequibilidade"
+  ],
+  "contexto_licitatorio_json": [
+    "julgamento de proposta",
+    "inexequibilidade",
+    "diligência"
+  ],
+  "grau_utilidade": 0.91,
+  "score_confianca_interno": 0.87,
+  "resumo_uso_pratico": "Muito útil para peças que sustentam a ilegalidade da desclassificação automática por suposta inexequibilidade.",
+  "texto_base": "Texto integral ou excerto consolidado do precedente.",
+  "texto_indexavel": "inexequibilidade diligência planilha custos proposta desclassificação automática art 59 lei 14133",
+  "hash_texto": "sha256:exemplo"
+}

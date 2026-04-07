@@ -1,0 +1,72 @@
+[
+  {
+    "codigo": "formalismo_moderado",
+    "titulo": "Formalismo moderado e erro sanável",
+    "descricao": "Casos em que a falha é formal, sanável e não compromete a substância da proposta ou da habilitação.",
+    "palavras_chave": ["formalismo moderado", "erro formal", "vício sanável", "falha formal", "saneamento"],
+    "exemplos": ["documento complementar", "erro material", "ausência sanável"]
+  },
+  {
+    "codigo": "diligencia",
+    "titulo": "Necessidade de diligência",
+    "descricao": "Casos em que a Administração deveria oportunizar esclarecimento ou comprovação antes de desclassificar ou inabilitar.",
+    "palavras_chave": ["diligência", "esclarecimento", "comprovação", "oportunidade", "saneamento"],
+    "exemplos": ["planilha", "nota fiscal", "atestado", "documento complementar"]
+  },
+  {
+    "codigo": "inexequibilidade",
+    "titulo": "Inexequibilidade e defesa da proposta",
+    "descricao": "Casos relativos à presunção de inexequibilidade, planilha de custos e necessidade de defesa da proposta.",
+    "palavras_chave": ["inexequibilidade", "exequibilidade", "planilha", "custos", "proposta"],
+    "exemplos": ["proposta baixa", "custos diretos", "margem", "diligência prévia"]
+  },
+  {
+    "codigo": "vinculacao_edital",
+    "titulo": "Vinculação ao edital",
+    "descricao": "Casos em que há exigência não prevista ou interpretação ampliativa do edital.",
+    "palavras_chave": ["vinculação ao edital", "instrumento convocatório", "exigência não prevista", "critério não previsto"],
+    "exemplos": ["documento extra", "formalidade não prevista", "mudança de critério"]
+  },
+  {
+    "codigo": "competitividade",
+    "titulo": "Competitividade e vantajosidade",
+    "descricao": "Casos que apontam restrição indevida à disputa, perda de competitividade e prejuízo à proposta mais vantajosa.",
+    "palavras_chave": ["competitividade", "proposta mais vantajosa", "restrição à competição", "isonomia"],
+    "exemplos": ["edital restritivo", "exigência excessiva", "redução de concorrência"]
+  },
+  {
+    "codigo": "habilitacao",
+    "titulo": "Habilitação e capacidade técnica",
+    "descricao": "Casos relacionados a documentos de habilitação, atestados e comprovação técnica.",
+    "palavras_chave": ["habilitação", "atestado", "capacidade técnica", "qualificação técnica"],
+    "exemplos": ["atestados", "balanço", "índices", "certidões"]
+  },
+  {
+    "codigo": "julgamento_objetivo",
+    "titulo": "Julgamento objetivo",
+    "descricao": "Casos em que o julgamento foi subjetivo, impreciso ou dissociado de critérios objetivos.",
+    "palavras_chave": ["julgamento objetivo", "subjetividade", "critério objetivo", "razoabilidade", "proporcionalidade"],
+    "exemplos": ["interpretação ampliativa", "critérios vagos", "avaliação subjetiva"]
+  },
+  {
+    "codigo": "erro_sanavel",
+    "titulo": "Erro sanável",
+    "descricao": "Casos em que o defeito apontado poderia ser corrigido sem prejuízo à isonomia.",
+    "palavras_chave": ["erro sanável", "erro material", "saneamento", "correção"],
+    "exemplos": ["ajuste documental", "retificação", "complementação"]
+  },
+  {
+    "codigo": "capacidade_tecnica",
+    "titulo": "Capacidade técnica",
+    "descricao": "Casos sobre exigência, suficiência ou interpretação de atestados e experiência anterior.",
+    "palavras_chave": ["capacidade técnica", "atestado", "aptidão", "experiência"],
+    "exemplos": ["quantitativo mínimo", "objeto compatível", "semelhança"]
+  },
+  {
+    "codigo": "proposta_mais_vantajosa",
+    "titulo": "Proposta mais vantajosa",
+    "descricao": "Casos em que a decisão administrativa compromete a busca da proposta efetivamente mais vantajosa.",
+    "palavras_chave": ["proposta mais vantajosa", "vantajosidade", "interesse público", "economicidade"],
+    "exemplos": ["desclassificação excessiva", "restrição indevida", "prejuízo ao erário"]
+  }
+]
