@@ -6,6 +6,8 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+from tools.bootstrap_github_streamlit import ensure_base_ready
+
 from modules.base_db import find_db_files, summarize_bases
 from modules.citation_extractor import classify_piece_type, detect_thesis, extract_references_with_context, split_into_argument_blocks
 from modules.document_builder import build_docx_bytes, build_marked_text, build_pdf_bytes, build_revised_text
@@ -16,11 +18,23 @@ from modules.telemetry import get_summary, log_event
 
 st.set_page_config(page_title='Atlas dos Acórdãos V17', page_icon='⚖️', layout='wide')
 
+
 BASE_DIR = Path(__file__).parent
 DB_DIR = BASE_DIR / 'data' / 'base'
 LOGO_PATH = BASE_DIR / 'assets' / 'logo_ms.png'
 MAX_UPLOAD_MB = 20
 ADMIN_KEY = os.getenv('ATLAS_ADMIN_KEY', 'atlas-admin')
+
+
+def ensure_runtime_base() -> tuple[bool, str]:
+    try:
+        result = ensure_base_ready(BASE_DIR)
+        return result.get('ready', False), result.get('message', 'Base não encontrada.')
+    except Exception as exc:
+        return False, f'Falha ao preparar a base automaticamente: {exc}'
+
+
+base_ready, base_runtime_message = ensure_runtime_base()
 
 if 'analysis' not in st.session_state:
     st.session_state.analysis = None
@@ -204,6 +218,12 @@ if summary.get('total_bases', 0):
     (st.success if summary.get('base_inteligente_detectada') else st.info)(base_warning(summary))
 else:
     st.warning(base_warning(summary))
+
+if base_runtime_message:
+    if base_ready:
+        st.caption('Preparação automática da base: ' + base_runtime_message)
+    else:
+        st.caption('Preparação automática da base: ' + base_runtime_message)
 
 main_tab, manual_tab, admin_tab = st.tabs(['Upload e auditoria', 'Busca manual de precedentes', 'Painel administrativo'])
 
